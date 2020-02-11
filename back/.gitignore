@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 node_modules
 /.pnp
 .pnp.js
+=======
+node_modules
+back/node_modules
+>>>>>>> master
 
 # testing
 /coverage
@@ -23,5 +28,9 @@ yarn-debug.log*
 yarn-error.log*
 
 package-lock.json
+<<<<<<< HEAD
 
 keys.js
+=======
+back/package-lock.json
+>>>>>>> master
