@@ -1,38 +1,38 @@
-// declare all the necessary libraries
+// declaration: declare the necessary libraries
 const  http  =  require('http');
 const  path  =  require('path');
 const  express  =  require('express');
 const  bodyParser  =  require('body-parser');
 const  morgan  =  require('morgan');
-const authRouter = require('./routes/auth/auth');
 const  app  =  express();
 
-app.get("/", (req,res)=>{
-    res.send("youhou");
-})
+const authRouter = require('./routes/auth/auth');
 
-app.use('/auth', authRouter); //where authRouter is imported
-
-
-// set up the application
+// configuration: set up the application
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended:  false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname  +  '/public'));
 
-
+// the functional parts:
 // implement the API part
 app.get("/", (req,res) => {
-    res.send("youhou");
+   res.send("youhou");
 })
+
+
+app.use('/auth', authRouter); //where authRouter is imported
+
 /// in case path is not found, return the 'Not Found' 404 code
 app.use(function(req, res, next) {
-    var  err  =  new  Error('Not Found');
-    err.status  =  404;
-    next(err);
+   var  err  =  new  Error('Not Found');
+   err.status  =  404;
+   next(err);
 });
 
+
 // launch the node server
-let  server  =  app.listen( process.env.PORT  ||  3000, function(){
-    console.log('Listening on port '  +  server.address().port);
+// changed backend port to 5000
+let  server  =  app.listen( process.env.PORT  ||  5000, function(){
+   console.log('Listening on port '  +  server.address().port);
 });
