@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Wild server",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dbcreate": "node ./helpers/create"
+  },
+  "author": "wilder",
+  "dependencies": {
+    "@material-ui/core": "^4.8.2",
+    "@material-ui/icons": "^4.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.17.1",
+    "morgan": "^1.9.0",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zzphyr/wcs-HomersOdyssey-.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zzphyr/wcs-HomersOdyssey-/issues"
+  },
+  "homepage": "https://github.com/Zzphyr/wcs-HomersOdyssey-#readme"
+}
